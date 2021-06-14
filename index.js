@@ -11,6 +11,9 @@ const cookieParser = require('cookie-parser');
 
 const passport = require('./config/passport');
 
+// Extraer variables.env
+require('dotenv').config({ path: 'variables.env' })
+
 // Helpers con algunas funciones
 const helpers = require('./helpers');
 
@@ -65,7 +68,7 @@ app.use((req, res, next) => {
     res.locals.vardump = helpers.vardump;
     res.locals.mensajes = req.flash();
     res.locals.usuario = { ...req.user } || null;
-    
+
     console.log(res.locals.usuario)
     next();
 });
@@ -80,6 +83,12 @@ app.use((req, res, next) => {
 // Ruta para el home
 app.use('/', routes())
 
-app.listen(4000);
 
+const host = process.env.HOST || '0.0.0.0';
+const port = process.env.PORT || 3000;
+
+// app.listen(4000);
+app.listen(port, host, () => {
+    console.log('El servidor esta funcionando.');
+})
 require('./handlers/emails')

@@ -20,7 +20,7 @@ const db = new Sequelize(process.env.BD_NOMBRE,
         host: process.env.BD_HOST,
         dialect: 'mysql',
         port: process.env.DB_PORT,
-        operatorsAliases: false,
+        // operatorsAliases: false,
         define: {
             timestamps: false
         },
