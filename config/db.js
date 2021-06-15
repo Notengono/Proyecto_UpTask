@@ -32,5 +32,5 @@ const db = new Sequelize(process.env.BD_NOMBRE,
         }
         /* one of 'mysql' | 'mariadb' | 'postgres' | 'mssql' */
     });
-
+console.log('process.env.BD_HOST: ',process.env.BD_HOST)
 module.exports = db;
