@@ -32,9 +32,4 @@ const db = new Sequelize(process.env.BD_NOMBRE,
         }
         /* one of 'mysql' | 'mariadb' | 'postgres' | 'mssql' */
     });
-console.log('process.env.BD_HOST: ',process.env.BD_HOST)
-console.log('process.env.BD_USER: ',process.env.BD_USER)
-console.log('process.env.BD_PASS: ',process.env.BD_PASS)
-console.log('process.env.DB_PORT: ',process.env.DB_PORT)
-console.log('Conexión: ',db)
 module.exports = db;
