@@ -27,7 +27,7 @@ exports.enviar = async (opciones) => {
     const text = htmlToText.fromString(html);
 
     let opcionesEmail = {
-        from: '"UpTask 👻" <no-reply@uptask.com>', // sender address
+        from: '"Martin" <info@flydata.com.ar>', // sender address
         to: opciones.usuario.email, // list of receivers
         subject: opciones.subject, // Subject line
         text, // plain text body

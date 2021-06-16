@@ -92,3 +92,14 @@ app.listen(port, host, () => {
     console.log('El servidor esta funcionando.');
 })
 require('./handlers/emails')
+
+/** 
+ * 
+ * DATABASE Credentials :
+
+Remote Host         freedb.tech
+Port                3306
+Database Name       freedbtech_uptasktincho
+Username            freedbtech_uptasktincho
+Password            T1nch0_db4free
+*/
